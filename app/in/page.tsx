@@ -1,45 +1,27 @@
 
-import type { Metadata } from "next";
-import Link from "next/link";
-
-export const metadata: Metadata = {
-  title: "Codevyesh India – Testing Page",
-  description: "Testing whether both domains show the same content.",
-};
-
 export default function IndiaPage() {
   return (
     <main
       style={{
         minHeight: "100vh",
-        padding: "60px 24px",
-        textAlign: "center",
-        background: "#fef3c7",
-        color: "#111827",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        background: "#f0fdf4",
+        color: "#166534",
         fontFamily: "Arial, sans-serif",
+        textAlign: "center",
+        padding: "20px",
       }}
     >
-      <h1>🧪 WEBSITE TEST — INDIA VERSION</h1>
+      <h1>👋 Hi, Welcome to Codevyesh!</h1>
 
-      <h2>Codevyesh India 🇮🇳</h2>
+      <h2>🇮🇳 Welcome to Codevyesh India</h2>
 
-      <p>TEST ID: INDIA-2026-001</p>
+      <p>Your website is working successfully!</p>
 
-      <p>
-        If you can see this yellow page, the India test
-        page is working correctly.
-      </p>
-
-      <p>
-        Domain: codevyesh.in
-      </p>
-
-      <Link
-        href="/"
-        style={{ color: "#2563eb", fontWeight: "bold" }}
-      >
-        Visit Main Website
-      </Link>
+      <p>Test ID: INDIA-2026-001</p>
     </main>
   );
 }
