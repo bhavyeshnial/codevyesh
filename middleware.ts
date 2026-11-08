@@ -12,10 +12,9 @@ export function middleware(request: NextRequest) {
       host === "codevyesh.in") &&
     request.nextUrl.pathname === "/"
   ) {
-    const url = request.nextUrl.clone();
-    url.pathname = "/in";
-
-    return NextResponse.rewrite(url);
+    return NextResponse.rewrite(
+      new URL("/in", request.url)
+    );
   }
 
   return NextResponse.next();
