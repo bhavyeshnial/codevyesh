@@ -17,9 +17,19 @@ export function middleware(request: NextRequest) {
     );
   }
 
+  if (
+    (host === "www.codevyesh.in" ||
+      host === "codevyesh.in") &&
+    request.nextUrl.pathname === "/in"
+  ) {
+    return NextResponse.rewrite(
+      new URL("/404", request.url)
+    );
+  }
+
   return NextResponse.next();
 }
 
 export const config = {
-  matcher: ["/"],
+  matcher: ["/", "/in"],
 };
